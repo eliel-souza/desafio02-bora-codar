@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600&family=Lato:wght@300;400&display=swap');
+
+:root {
+  --main-purple: #D9CDF7;
+  --text-purple: #271A45;
+  --main-font: "Lato", sans-serif;
+  --main-part: "Crimson Pro", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background: var(--main-purple);
+  font-family: var(--main-font);
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.card {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image__rotate {
+  position: absolute;
+  right: 11%;
+  top: 0;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content__code {
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 100%;
+  color: var(--text-purple);
+}
+
+.content__title {
+  font-family: var(--main-part);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 100%;
+  color: var(--text-purple);
+  margin-top: 0.75rem;
+}
+
+.content__price {
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 100%;
+  color: var(--text-purple);
+  margin-top: 0.75rem;
+}
+
+.content__button {
+  max-width: 9.4rem;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: center;
+  border: 0.5px solid var(--text-purple);
+  border-radius: 62.4rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 790px) {
+  .card {
+    grid-template-columns: 1fr 0.8fr;
+    gap: 0.813rem;
+  }
+
+  .content {
+    align-items: flex-start;
+  }
+
+  .content__title {
+    font-size: 2rem;
+  }
+
+  .content__price {
+    font-size: 1rem;
+  }
+}
