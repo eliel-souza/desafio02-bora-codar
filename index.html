@@ -10,17 +10,24 @@
 <body>
   <main class="container">
     <div class="card">
-      <picture class="image">
-        <img class="image__product" src="./images/sofa.png" alt="imagem de um sofá">
-        <img class="image__rotate" src="./images/360.svg" alt="imagem 360">
-      </picture>
-      <div class="content">
-        <p class="content__code">CÓDIGO: 42404</p>
-        <h1 class="content__title">Sofá Margot II - Rosé</h1>
-        <p class="content__price">R$ 4.000 </p>
-        <a class="content__button" href="#">adicionar à cesta</a>
+      <!-- Container Image -->
+      <div class="image" id="animation">
+        <img class="image__icon" src="./images/360.svg" alt="clique em 360 para exibir animação do sofá" id="image__360">
+        <img class="image__icon" src="./images/close.svg" alt="clique em close para fechar animação do sofá" id="image__close">
+        
+        <img class="image__product" src="./images/sofa.png" alt="imagem estática de um sofá" id="image__static">
+        <img class="image__product" src="./images/sofa.gif" alt="imagem com animação de um sofá" id="image__animated">
+      </div>
+      <!-- Container Detail -->
+      <div class="detail">
+        <p class="detail__code">CÓDIGO: 42404</p>
+        <h1 class="detail__title">Sofá Margot II - Rosé</h1>
+        <p class="detail__price">R$ 4.000 </p>
+        <button class="detail__button">Adicionar à cesta</button>
       </div>
     </div>
   </main>
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
