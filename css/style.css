@@ -3,8 +3,8 @@
 :root {
   --main-purple: #D9CDF7;
   --text-purple: #271A45;
-  --main-font: "Lato", sans-serif;
-  --main-part: "Crimson Pro", serif;
+  --font-main: "Lato", sans-serif;
+  --font-part: "Crimson Pro", serif;
 }
 
 * {
@@ -12,6 +12,8 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  color: var(--text-purple);
+  line-height: 100%;
 }
 
 img {
@@ -26,7 +28,7 @@ h1 {
 
 body {
   background: var(--main-purple);
-  font-family: var(--main-font);
+  font-family: var(--font-main);
 }
 
 .container {
@@ -41,57 +43,69 @@ body {
   gap: 1.4rem;
 }
 
+/* Container Image */
+
 .image {
   position: relative;
+  max-width: 28.125rem;
 }
 
-.image__rotate {
+.image--active #image__360,
+.image--active #image__static {
+  display: none;
+}
+
+.image--active #image__close,
+.image--active #image__animated {
+  display: initial;
+}
+
+.image__icon {
   position: absolute;
   right: 11%;
   top: 0;
   cursor: pointer;
 }
 
-.content {
+#image__close,
+#image__animated {
+  display: none;
+}
+
+/* Container Detail */
+
+.detail {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.content__code {
+.detail__code {
   font-weight: 300;
   font-size: 0.625rem;
-  line-height: 100%;
-  color: var(--text-purple);
 }
 
-.content__title {
-  font-family: var(--main-part);
+.detail__title {
+  font-family: var(--font-part);
   font-weight: 600;
   font-size: 1.8rem;
-  line-height: 100%;
-  color: var(--text-purple);
   margin-top: 0.75rem;
 }
 
-.content__price {
+.detail__price {
   font-weight: 400;
   font-size: 0.9rem;
-  line-height: 100%;
-  color: var(--text-purple);
   margin-top: 0.75rem;
 }
 
-.content__button {
-  max-width: 9.4rem;
+.detail__button {
   font-weight: 400;
   font-size: 0.75rem;
-  color: var(--text-purple);
   line-height: 1rem;
-  text-align: center;
   border: 0.5px solid var(--text-purple);
   border-radius: 62.4rem;
+  background: transparent;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -104,15 +118,15 @@ body {
     gap: 0.813rem;
   }
 
-  .content {
+  .detail {
     align-items: flex-start;
   }
 
-  .content__title {
+  .detail__title {
     font-size: 2rem;
   }
 
-  .content__price {
+  .detail__price {
     font-size: 1rem;
   }
 }
