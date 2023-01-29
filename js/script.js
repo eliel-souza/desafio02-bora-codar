@@ -4,9 +4,3 @@ const toggleElement = document.getElementById('animation');
 
 btn_360.onclick = () => toggleElement.classList.toggle('image--active');
 btn_close.onclick = () => toggleElement.classList.toggle('image--active');
-
-
-
-
-
-
